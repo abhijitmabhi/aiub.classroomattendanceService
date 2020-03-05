@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BioStarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_EVENT_LOG">
+    <Key>
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nDateTime" Type="Int32" Nullable="false" />
+    <Property Name="nReaderIdn" Type="Int32" Nullable="false" />
+    <Property Name="nEventIdn" Type="Int32" Nullable="false" />
+    <Property Name="nUserID" Type="Int32" Nullable="false" />
+    <Property Name="nIsLog" Type="Int16" Nullable="false" />
+    <Property Name="nTNAEvent" Type="Int16" Nullable="false" />
+    <Property Name="nIsUseTA" Type="Int16" Nullable="false" />
+    <Property Name="nType" Type="Int16" Nullable="false" />
+    <Property Name="IsSync" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER">
+    <Key>
+      <PropertyRef Name="nUserIdn" />
+    </Key>
+    <Property Name="nUserIdn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sUserName" Type="String" MaxLength="96" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nDepartmentIdn" Type="Int32" Nullable="false" />
+    <Property Name="sTelNumber" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sUserID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sPassword" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bPassword2" Type="Binary" MaxLength="32" FixedLength="true" Nullable="false" />
+    <Property Name="nStartDate" Type="Int32" Nullable="false" />
+    <Property Name="nEndDate" Type="Int32" Nullable="false" />
+    <Property Name="nAdminLevel" Type="Int32" Nullable="false" />
+    <Property Name="nAuthMode" Type="Int32" Nullable="false" />
+    <Property Name="nAuthLimitCount" Type="Int32" Nullable="false" />
+    <Property Name="nTimedAPB" Type="Int32" Nullable="false" />
+    <Property Name="nEncryption" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BioStarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_EVENT_LOG" EntityType="Self.TB_EVENT_LOG" />
+    <EntitySet Name="TB_USER" EntityType="Self.TB_USER" />
+    <EntitySet Name="TB_READER" EntityType="BioStarModel.TB_READER" />
+  </EntityContainer>
+  <EntityType Name="TB_READER">
+    <Key>
+      <PropertyRef Name="nReaderIdn" />
+    </Key>
+    <Property Name="nReaderIdn" Type="Int32" Nullable="false" />
+    <Property Name="sName" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="nType" Type="Int32" Nullable="false" />
+    <Property Name="nDeptIdn" Type="Int32" Nullable="false" />
+    <Property Name="sIP" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="sMacAddress" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="nConnType" Type="Int32" Nullable="false" />
+    <Property Name="sDescription" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

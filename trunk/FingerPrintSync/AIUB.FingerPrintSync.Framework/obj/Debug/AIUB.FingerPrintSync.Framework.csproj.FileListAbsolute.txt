@@ -1,0 +1,16 @@
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\AIUB.FingerPrintSync.Framework.dll.config
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\AIUB.FingerPrintSync.Framework.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\AIUB.FingerPrintSync.Framework.pdb
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\EntityFramework.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\EntityFramework.SqlServer.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\System.Net.Http.Formatting.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\EntityFramework.xml
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\EntityFramework.SqlServer.xml
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\System.Net.Http.Formatting.xml
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\obj\Debug\AIUB.FingerPrintSync.Framework.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\obj\Debug\AIUB.FingerPrintSync.Framework.pdb
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\Newtonsoft.Json.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\Newtonsoft.Json.xml
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\System.Web.Helpers.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\System.Web.Helpers.xml
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.Framework\bin\Debug\System.Net.Http.dll

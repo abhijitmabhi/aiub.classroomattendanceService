@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="zkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ipAddress" Type="nchar" MaxLength="20" />
+    <Property Name="logTime" Type="datetime" />
+    <Property Name="userId" Type="nchar" MaxLength="20" />
+    <Property Name="punchType" Type="nchar" MaxLength="10" />
+    <Property Name="deviceId" Type="nchar" MaxLength="15" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="IsSynced" Type="bit" />
+    <Property Name="IsInvalid" Type="bit" />
+  </EntityType>
+  <EntityType Name="roomIP">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ipAddress" Type="nchar" MaxLength="20" />
+    <Property Name="roomNumber" Type="nchar" MaxLength="10" />
+    <Property Name="description" Type="nchar" MaxLength="20" />
+    <Property Name="IsEnabled" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="zkModelStoreContainer">
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="roomIP" EntityType="Self.roomIP" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

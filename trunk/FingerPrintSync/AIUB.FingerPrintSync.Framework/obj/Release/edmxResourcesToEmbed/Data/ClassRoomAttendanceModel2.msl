@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="zkModelStoreContainer" CdmEntityContainer="zkEntities2">
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="zkModel.Log">
+        <MappingFragment StoreEntitySet="Logs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+          <ScalarProperty Name="logTime" ColumnName="logTime" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="punchType" ColumnName="punchType" />
+          <ScalarProperty Name="deviceId" ColumnName="deviceId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="IsSynced" ColumnName="IsSynced" />
+          <ScalarProperty Name="IsInvalid" ColumnName="IsInvalid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roomIPs">
+      <EntityTypeMapping TypeName="zkModel.roomIP">
+        <MappingFragment StoreEntitySet="roomIP">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+          <ScalarProperty Name="roomNumber" ColumnName="roomNumber" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

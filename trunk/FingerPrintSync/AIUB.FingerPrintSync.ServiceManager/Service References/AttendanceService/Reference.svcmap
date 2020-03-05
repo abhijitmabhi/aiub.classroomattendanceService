@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9d8ca9c9-812a-4fa4-b602-afe933c042ab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.16.22.121:53931/PrintService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PrintService1.disco" MetadataType="Disco" ID="39197063-185d-4633-9c59-8518ba9fd7c3" SourceId="1" SourceUrl="http://172.16.22.121:53931/PrintService.svc?disco" />
+    <MetadataFile FileName="PrintService1.wsdl" MetadataType="Wsdl" ID="a2df99e2-eb47-4a14-b862-0436d96eae33" SourceId="1" SourceUrl="http://172.16.22.121:53931/PrintService.svc?wsdl" />
+    <MetadataFile FileName="PrintService5.xsd" MetadataType="Schema" ID="a1e9e4f7-9b1b-4a6b-a5b3-5c874b1d80a0" SourceId="1" SourceUrl="http://172.16.22.121:53931/PrintService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PrintService51.xsd" MetadataType="Schema" ID="2ee34164-7ea1-4d88-91af-46afd34250ee" SourceId="1" SourceUrl="http://172.16.22.121:53931/PrintService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PrintService52.xsd" MetadataType="Schema" ID="e7c04763-63a5-4d6c-bacf-0f4ff5d9b54e" SourceId="1" SourceUrl="http://172.16.22.121:53931/PrintService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PrintService53.xsd" MetadataType="Schema" ID="25bc9a46-d951-4cde-83b9-cbe79a2690ff" SourceId="1" SourceUrl="http://172.16.22.121:53931/PrintService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PrintService54.xsd" MetadataType="Schema" ID="3b67296a-7042-48db-a841-d9d547fb144a" SourceId="1" SourceUrl="http://172.16.22.121:53931/PrintService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

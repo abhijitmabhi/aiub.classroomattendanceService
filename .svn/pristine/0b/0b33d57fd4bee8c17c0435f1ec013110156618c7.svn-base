@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel.Description;
+using System.Text;
+
+
+using System.Net;
+using AIUB.FingerPrintSync.ServiceManager.AttendanceService;
+using WCFUtils.CommonUtils;
+
+
+namespace AIUB.FingerPrintSync.ServiceManager
+{
+    public class AttandanceServiceManager : IDisposable
+    {
+        #region Attandance service
+        //new valid employee list according to new rfid inserted or edit
+
+
+
+        public static SubmitResult2Ofstring PostFingerPrintAttendance(int key, System.DateTime entryTime)
+        {
+            SubmitResult2Ofstring result;
+            try
+            {
+                
+                WCFUtils.ClientUtils.ClientContext.CredentialMessageHeader = new CredentialMessageHeader(string.Empty, string.Empty, string.Empty, string.Empty, string.Empty);
+                using (AttendanceService.PrintServiceClient service = ServiceProxy.AttendanceServiceProxy)
+                {
+                    result = service.PostAttenanceLog2(key, entryTime);
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return new SubmitResult2Ofstring() { IsSuccess = false };
+            }
+        }
+
+        #endregion
+
+
+
+        public void Dispose()
+        {
+
+        }
+    }
+}

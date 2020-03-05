@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="zkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ipAddress" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="logTime" Type="DateTime" Precision="3" />
+    <Property Name="userId" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="punchType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="deviceId" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="IsSynced" Type="Boolean" />
+    <Property Name="IsInvalid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="roomIP">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ipAddress" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="roomNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="IsEnabled" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="zkEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Logs" EntityType="Self.Log" />
+    <EntitySet Name="roomIPs" EntityType="Self.roomIP" />
+  </EntityContainer>
+</Schema>

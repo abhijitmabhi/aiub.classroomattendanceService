@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PrintService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HIMS.UMS.Entities" />
+      <xsd:import schemaLocation="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/HIMS.UMS.Utils.Objects" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPrintService_GetStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudent" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_GetStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_GetRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_GetRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_GeneratePaymentSlip_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePaymentSlip" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_GeneratePaymentSlip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePaymentSlipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_GetBankByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankByID" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_GetBankByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_PostAttenanceLog2_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostAttenanceLog2" />
+  </wsdl:message>
+  <wsdl:message name="IPrintService_PostAttenanceLog2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostAttenanceLog2Response" />
+  </wsdl:message>
+  <wsdl:portType name="IPrintService">
+    <wsdl:operation name="GetStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintService/GetStudent" message="tns:IPrintService_GetStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintService/GetStudentResponse" message="tns:IPrintService_GetStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintService/GetRegistration" message="tns:IPrintService_GetRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintService/GetRegistrationResponse" message="tns:IPrintService_GetRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePaymentSlip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintService/GeneratePaymentSlip" message="tns:IPrintService_GeneratePaymentSlip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintService/GeneratePaymentSlipResponse" message="tns:IPrintService_GeneratePaymentSlip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintService/GetBankByID" message="tns:IPrintService_GetBankByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintService/GetBankByIDResponse" message="tns:IPrintService_GetBankByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostAttenanceLog2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintService/PostAttenanceLog2" message="tns:IPrintService_PostAttenanceLog2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintService/PostAttenanceLog2Response" message="tns:IPrintService_PostAttenanceLog2_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPrintService" type="tns:IPrintService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStudent">
+      <soap:operation soapAction="http://tempuri.org/IPrintService/GetStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistration">
+      <soap:operation soapAction="http://tempuri.org/IPrintService/GetRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePaymentSlip">
+      <soap:operation soapAction="http://tempuri.org/IPrintService/GeneratePaymentSlip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankByID">
+      <soap:operation soapAction="http://tempuri.org/IPrintService/GetBankByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostAttenanceLog2">
+      <soap:operation soapAction="http://tempuri.org/IPrintService/PostAttenanceLog2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrintService">
+    <wsdl:port name="BasicHttpBinding_IPrintService" binding="tns:BasicHttpBinding_IPrintService">
+      <soap:address location="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

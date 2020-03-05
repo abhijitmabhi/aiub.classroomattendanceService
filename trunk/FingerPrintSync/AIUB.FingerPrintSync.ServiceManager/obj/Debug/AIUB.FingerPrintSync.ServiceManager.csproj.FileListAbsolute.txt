@@ -1,0 +1,15 @@
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\AIUB.FingerPrintSync.ServiceManager.dll.config
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\AIUB.FingerPrintSync.ServiceManager.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\AIUB.FingerPrintSync.ServiceManager.pdb
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\AIUB.FingerPrintSync.Framework.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\WCFUtils.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\EntityFramework.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\System.Net.Http.Formatting.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\AIUB.FingerPrintSync.Framework.pdb
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\EntityFramework.xml
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\System.Net.Http.Formatting.xml
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\obj\Debug\AIUB.FingerPrintSync.ServiceManager.csprojResolveAssemblyReference.cache
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\obj\Debug\AIUB.FingerPrintSync.ServiceManager.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\obj\Debug\AIUB.FingerPrintSync.ServiceManager.pdb
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\Newtonsoft.Json.dll
+D:\VuesCode\HIMS_Code\Naabs.FingerPrint\trunk\FingerPrintSync\AIUB.FingerPrintSync.ServiceManager\bin\Debug\Newtonsoft.Json.xml

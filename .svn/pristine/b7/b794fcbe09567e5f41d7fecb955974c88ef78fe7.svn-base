@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC312874-BBAF-4B29-BD74-50A782912E84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AIUB.FingerPrintSync.Framework</RootNamespace>
+    <AssemblyName>AIUB.FingerPrintSync.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataManager.cs" />
+    <Compile Include="Data\BioStarEntitiesPartial.cs" />
+    <Compile Include="Data\BioStarModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BioStarModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BioStarModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BioStarModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BioStarModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BioStarModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TB_EVENT_LOG.cs">
+      <DependentUpon>BioStarModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TB_READER.cs">
+      <DependentUpon>BioStarModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TB_READER_Partial.cs" />
+    <Compile Include="Data\TB_USER.cs">
+      <DependentUpon>BioStarModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Facade\DeviceFacade.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\EventLogHelper\LogHelper.cs" />
+    <Compile Include="Facade\AttendanceFacade.cs" />
+    <Compile Include="Helpers\Utils.cs" />
+    <Compile Include="Helpers\WinServiceHelper.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\IniHandler\IniHelper.cs" />
+    <Compile Include="Helpers\IniHandler\IniFile.cs" />
+    <Compile Include="Helpers\IniHandler\ReadWriteIni.cs" />
+    <Compile Include="Objects\AppSettings.cs" />
+    <Compile Include="Helpers\AppSettings\AppSettingsHelper.cs" />
+    <Compile Include="Helpers\AppSettings\ExportImportManager.cs" />
+    <Compile Include="Helpers\AppSettings\ObjecSerializer.cs" />
+    <Compile Include="WcfComunication\Client\WcfClient.cs" />
+    <Compile Include="WcfComunication\Server\MessageService.cs" />
+    <Compile Include="WcfComunication\Server\WcfServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Data\BioStarModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BioStarModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\BioStarModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BioStarModel.edmx</DependentUpon>
+      <LastGenOutput>BioStarModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\BioStarModel.edmx.diagram">
+      <DependentUpon>BioStarModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\BioStarModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BioStarModel.edmx</DependentUpon>
+      <LastGenOutput>BioStarModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

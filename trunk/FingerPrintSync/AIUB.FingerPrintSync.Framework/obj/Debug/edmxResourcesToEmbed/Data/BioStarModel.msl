@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BioStarModelStoreContainer" CdmEntityContainer="BioStarEntities">
+    <EntitySetMapping Name="TB_EVENT_LOG">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_LOG">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nIsLog" ColumnName="nIsLog" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nIsUseTA" ColumnName="nIsUseTA" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="IsSync" ColumnName="IsSync" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USER">
+        <MappingFragment StoreEntitySet="TB_USER">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+          <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="bPassword2" ColumnName="bPassword2" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+          <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+          <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+          <ScalarProperty Name="nEncryption" ColumnName="nEncryption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_READER">
+      <EntityTypeMapping TypeName="BioStarModel.TB_READER">
+        <MappingFragment StoreEntitySet="TB_READER">
+          <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+          <ScalarProperty Name="nConnType" ColumnName="nConnType" />
+          <ScalarProperty Name="sMacAddress" ColumnName="sMacAddress" />
+          <ScalarProperty Name="sIP" ColumnName="sIP" />
+          <ScalarProperty Name="nDeptIdn" ColumnName="nDeptIdn" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

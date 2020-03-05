@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HIMS.UMS.Entities" />
+  <xs:import schemaLocation="http://172.16.2.104/AIUB.UMS.Services/PrintService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/HIMS.UMS.Utils.Objects" />
+  <xs:element name="GetStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HIMS.UMS.Entities" minOccurs="0" name="GetStudentResult" nillable="true" type="q1:Users" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegistration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegistrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HIMS.UMS.Entities" minOccurs="0" name="GetRegistrationResult" nillable="true" type="q2:Registration2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeneratePaymentSlip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isPartialPayment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeneratePaymentSlipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HIMS.UMS.Entities" minOccurs="0" name="GeneratePaymentSlipResult" nillable="true" type="q3:StudentPaymentSlip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bankID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HIMS.UMS.Entities" minOccurs="0" name="GetBankByIDResult" nillable="true" type="q4:Bank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostAttenanceLog2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" type="xs:int" />
+        <xs:element minOccurs="0" name="entryTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostAttenanceLog2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HIMS.UMS.Utils.Objects" minOccurs="0" name="PostAttenanceLog2Result" nillable="true" type="q5:SubmitResult2Ofstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC312874-BBAF-4B29-BD74-50A782912E84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AIUB.FingerPrintSync.Framework</RootNamespace>
+    <AssemblyName>AIUB.FingerPrintSync.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ClassRoomAttendanceModel2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassRoomAttendanceModel2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClassRoomAttendanceModel2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassRoomAttendanceModel2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClassRoomAttendanceModel2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassRoomAttendanceModel2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Log.cs">
+      <DependentUpon>ClassRoomAttendanceModel2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\roomIP.cs">
+      <DependentUpon>ClassRoomAttendanceModel2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\zkEntities2Partial.cs" />
+    <Compile Include="Data\DataManager.cs" />
+    <Compile Include="Data\BioStarEntitiesPartial.cs" />
+    <Compile Include="Data\TB_READER_Partial.cs" />
+    <Compile Include="Facade\DeviceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\EventLogHelper\LogHelper.cs" />
+    <Compile Include="Facade\AttendanceFacade.cs" />
+    <Compile Include="Helpers\RestApiHelper\RestWebapiLogin.cs" />
+    <Compile Include="Helpers\Utils.cs" />
+    <Compile Include="Helpers\WinServiceHelper.cs" />
+    <Compile Include="Objects\LogDTO.cs" />
+    <Compile Include="Objects\Result.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\IniHandler\IniHelper.cs" />
+    <Compile Include="Helpers\IniHandler\IniFile.cs" />
+    <Compile Include="Helpers\IniHandler\ReadWriteIni.cs" />
+    <Compile Include="Objects\AppSettings.cs" />
+    <Compile Include="Helpers\AppSettings\AppSettingsHelper.cs" />
+    <Compile Include="Helpers\AppSettings\ExportImportManager.cs" />
+    <Compile Include="Helpers\AppSettings\ObjecSerializer.cs" />
+    <Compile Include="WcfComunication\Client\WcfClient.cs" />
+    <Compile Include="WcfComunication\Server\MessageService.cs" />
+    <Compile Include="WcfComunication\Server\WcfServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Data\ClassRoomAttendanceModel2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClassRoomAttendanceModel2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\ClassRoomAttendanceModel2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClassRoomAttendanceModel2.edmx</DependentUpon>
+      <LastGenOutput>ClassRoomAttendanceModel2.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\ClassRoomAttendanceModel2.edmx.diagram">
+      <DependentUpon>ClassRoomAttendanceModel2.edmx</DependentUpon>
+    </None>
+    <None Include="Data\ClassRoomAttendanceModel2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClassRoomAttendanceModel2.edmx</DependentUpon>
+      <LastGenOutput>ClassRoomAttendanceModel2.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
